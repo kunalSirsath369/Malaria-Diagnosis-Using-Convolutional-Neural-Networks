@@ -21,11 +21,11 @@ Output Layer: Dense layer with sigmoid activation for binary classification
 The model is trained for 20 epochs with an initial learning rate of 0.01, which is reduced on plateau. Early stopping is used to halt training when the validation loss stops improving. The final model is evaluated on a separate test set.
 
 ## Training and Validation Loss Plot
-
+![Alt text](output.png)
 ## Training and Validation Accuracy Plot
 
 ## Actual and Predicated Result
-
+![Alt text](output9.png)
 ## References
 TensorFlow Documentation: https://www.tensorflow.org/
 TensorFlow Datasets: https://www.tensorflow.org/datasets/catalog/malaria
