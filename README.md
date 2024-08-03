@@ -6,25 +6,26 @@ This project aims to develop a convolutional neural network (CNN) model using Te
 ## Dataset
 The dataset used for this project is the Malaria Cell Images Dataset available from [TensorFlow Datasets](https://www.tensorflow.org/datasets). It contains labeled images of infected and uninfected cells.
 
-## Project Structure
+## Model Architecture
+The model is a modified LeNet-5 architecture with added data augmentation and regularization to improve performance and prevent overfitting. The architecture includes the following layers:
 
-Malaria-Diagnosis/
-│
-├── data/ # Contains the dataset
-│
-├── notebooks/ # Jupyter notebooks for exploration and experimentation
-│
-├── models/ # Trained model files
-│
-├── src/ # Source code
-│ ├── data_preprocessing.py # Data preprocessing and augmentation
-│ ├── model.py # Model definition and training script
-│ ├── evaluate.py # Model evaluation script
-│
-├── plots/ # Plot images for model loss and accuracy
-│ ├── loss_plot.png
-│ ├── accuracy_plot.png
-│
-├── README.md # Project README
-│
-└── requirements.txt # Project dependencies
+Input Layer: Input size of 224x224x3
+Data Augmentation: Random flip and random rotation
+Convolutional Layers: Two Conv2D layers with ReLU activation and BatchNormalization
+Pooling Layers: Two MaxPool2D layers
+Dropout Layers: To prevent overfitting
+Fully Connected Layers: Dense layers with ReLU activation and BatchNormalization
+Output Layer: Dense layer with sigmoid activation for binary classification
+
+## Training and Validation
+The model is trained for 20 epochs with an initial learning rate of 0.01, which is reduced on plateau. Early stopping is used to halt training when the validation loss stops improving. The final model is evaluated on a separate test set.
+
+## Training and Validation Loss Plot
+
+## Training and Validation Accuracy Plot
+
+## Actual and Predicated Result
+
+## References
+TensorFlow Documentation: https://www.tensorflow.org/
+TensorFlow Datasets: https://www.tensorflow.org/datasets/catalog/malaria
